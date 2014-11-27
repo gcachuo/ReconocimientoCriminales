@@ -1,1 +1,2 @@
 C:\Users\Memo\Dropbox\Projects\ProyectoModelado\ProyectoModelado\bin\Debug\ProyectoModelado.exe.config
+C:\Users\Memo\Documents\GitHub\ReconocimientoCriminales\ProyectoModelado\bin\Debug\ProyectoModelado.exe.config
