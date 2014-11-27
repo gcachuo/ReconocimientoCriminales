@@ -1,1 +1,2 @@
 C:\Users\Memo\Dropbox\Projects\ProyectoModelado\ProyectoModelado\bin\Debug\ProyectoModelado.exe.config
+C:\Users\Javier\Source\Repos\ReconocimientoCriminales\ProyectoModelado\bin\Debug\ProyectoModelado.exe.config
