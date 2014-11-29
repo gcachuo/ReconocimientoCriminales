@@ -1,2 +1,14 @@
 C:\Users\Memo\Dropbox\Projects\ProyectoModelado\ProyectoModelado\bin\Debug\ProyectoModelado.exe.config
 C:\Users\Memo\Documents\GitHub\ReconocimientoCriminales\ProyectoModelado\bin\Debug\ProyectoModelado.exe.config
+C:\Users\Memo\Documents\GitHub\ReconocimientoCriminales\ProyectoModelado\obj\Debug\ProyectoModelado.csprojResolveAssemblyReference.cache
+C:\Users\Memo\Documents\GitHub\ReconocimientoCriminales\ProyectoModelado\obj\Debug\Main.baml
+C:\Users\Memo\Documents\GitHub\ReconocimientoCriminales\ProyectoModelado\obj\Debug\Main.g.cs
+C:\Users\Memo\Documents\GitHub\ReconocimientoCriminales\ProyectoModelado\obj\Debug\ProyectoModelado_MarkupCompile.cache
+C:\Users\Memo\Documents\GitHub\ReconocimientoCriminales\ProyectoModelado\obj\Debug\ProyectoModelado.g.resources
+C:\Users\Memo\Documents\GitHub\ReconocimientoCriminales\ProyectoModelado\obj\Debug\ProyectoModelado.Properties.Resources.resources
+C:\Users\Memo\Documents\GitHub\ReconocimientoCriminales\ProyectoModelado\obj\Debug\ProyectoModelado.csproj.GenerateResource.Cache
+C:\Users\Memo\Documents\GitHub\ReconocimientoCriminales\ProyectoModelado\bin\Debug\ProyectoModelado.exe
+C:\Users\Memo\Documents\GitHub\ReconocimientoCriminales\ProyectoModelado\bin\Debug\ProyectoModelado.pdb
+C:\Users\Memo\Documents\GitHub\ReconocimientoCriminales\ProyectoModelado\obj\Debug\ProyectoModelado.Form1.resources
+C:\Users\Memo\Documents\GitHub\ReconocimientoCriminales\ProyectoModelado\obj\Debug\ProyectoModelado.exe
+C:\Users\Memo\Documents\GitHub\ReconocimientoCriminales\ProyectoModelado\obj\Debug\ProyectoModelado.pdb
