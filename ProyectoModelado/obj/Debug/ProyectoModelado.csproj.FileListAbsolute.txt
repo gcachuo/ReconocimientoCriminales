@@ -11,7 +11,6 @@ C:\Users\Memo\Documents\GitHub\ReconocimientoCriminales\ProyectoModelado\bin\Deb
 C:\Users\Memo\Documents\GitHub\ReconocimientoCriminales\ProyectoModelado\obj\Debug\ProyectoModelado.Form1.resources
 C:\Users\Memo\Documents\GitHub\ReconocimientoCriminales\ProyectoModelado\obj\Debug\ProyectoModelado.exe
 C:\Users\Memo\Documents\GitHub\ReconocimientoCriminales\ProyectoModelado\obj\Debug\ProyectoModelado.pdb
-<<<<<<< HEAD
 C:\Users\Memo\Documents\GitHub\ReconocimientoCriminales\ProyectoModelado\obj\Debug\ProyectoModelado.csprojResolveAssemblyReference.cache
 =======
 C:\Users\Javier\Source\Repos\ReconocimientoCriminales\ProyectoModelado\bin\Debug\ProyectoModelado.exe.config
@@ -37,4 +36,13 @@ C:\Users\Javier\Source\Repos\ReconocimientoCriminales\ProyectoModelado\bin\Debug
 C:\Users\Javier\Source\Repos\ReconocimientoCriminales\ProyectoModelado\bin\Debug\AForge.Vision.xml
 C:\Users\Javier\Source\Repos\ReconocimientoCriminales\ProyectoModelado\obj\Debug\ProyectoModelado.View.NewCriminal.resources
 C:\Users\Javier\Source\Repos\ReconocimientoCriminales\ProyectoModelado\obj\Debug\ProyectoModelado.View.AdmMenu.resources
->>>>>>> origin/master
+C:\Users\Memo\Documents\GitHub\ReconocimientoCriminales\ProyectoModelado\obj\Debug\ProyectoModelado.View.AdmMenu.resources
+C:\Users\Memo\Documents\GitHub\ReconocimientoCriminales\ProyectoModelado\obj\Debug\ProyectoModelado.View.NewCriminal.resources
+C:\Users\Memo\Documents\GitHub\ReconocimientoCriminales\ProyectoModelado\bin\Debug\AForge.dll
+C:\Users\Memo\Documents\GitHub\ReconocimientoCriminales\ProyectoModelado\bin\Debug\AForge.Imaging.dll
+C:\Users\Memo\Documents\GitHub\ReconocimientoCriminales\ProyectoModelado\bin\Debug\AForge.Math.dll
+C:\Users\Memo\Documents\GitHub\ReconocimientoCriminales\ProyectoModelado\bin\Debug\AForge.Vision.dll
+C:\Users\Memo\Documents\GitHub\ReconocimientoCriminales\ProyectoModelado\bin\Debug\AForge.xml
+C:\Users\Memo\Documents\GitHub\ReconocimientoCriminales\ProyectoModelado\bin\Debug\AForge.Imaging.xml
+C:\Users\Memo\Documents\GitHub\ReconocimientoCriminales\ProyectoModelado\bin\Debug\AForge.Math.xml
+C:\Users\Memo\Documents\GitHub\ReconocimientoCriminales\ProyectoModelado\bin\Debug\AForge.Vision.xml

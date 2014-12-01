@@ -181,18 +181,18 @@ namespace ProyectoModelado
         {
             if (e.Key.Equals(System.Windows.Input.Key.A))
             {
-                var i = mostrarVideo.Source;
-                if (d)
-                {
-                    var x = 0;
-                    while (File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"/foto" + x + ".jpg"))
-                    {
-                        x++;
-                    }
-                    i.Save (AppDomain.CurrentDomain.BaseDirectory + @"/foto" + x + ".jpg");
-                    savetopng
-                    d = false;
-                }
+                //var i = mostrarVideo.Source;
+                //if (d)
+                //{
+                //    var x = 0;
+                //    while (File.Exists(AppDomain.CurrentDomain.BaseDirectory + @"/foto" + x + ".jpg"))
+                //    {
+                //        x++;
+                //    }
+                //    i.Save (AppDomain.CurrentDomain.BaseDirectory + @"/foto" + x + ".jpg");
+                //    savetopng
+                //    d = false;
+                //}
             }
         }
     }
