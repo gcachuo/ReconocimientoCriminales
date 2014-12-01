@@ -43,6 +43,9 @@
             this.suavizadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nitidezToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.efectoGaussianoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.imagenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agregarImagenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarImagenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtApellidos = new System.Windows.Forms.TextBox();
@@ -66,18 +69,12 @@
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.pnlFotos = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cmbCarcel = new System.Windows.Forms.ComboBox();
             this.cmbEstatus = new System.Windows.Forms.ComboBox();
             this.txtRelacion = new System.Windows.Forms.TextBox();
             this.lblRelacion = new System.Windows.Forms.Label();
-            this.imagenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarImagenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarImagenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.imgCriminal)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            this.pnlFotos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // imgCriminal
@@ -204,13 +201,35 @@
             this.efectoGaussianoToolStripMenuItem.Text = "Efecto Gaussiano";
             this.efectoGaussianoToolStripMenuItem.Click += new System.EventHandler(this.efectoGaussianoToolStripMenuItem_Click);
             // 
+            // imagenToolStripMenuItem
+            // 
+            this.imagenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.agregarImagenToolStripMenuItem,
+            this.eliminarImagenToolStripMenuItem});
+            this.imagenToolStripMenuItem.Name = "imagenToolStripMenuItem";
+            this.imagenToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.imagenToolStripMenuItem.Text = "Imagen";
+            // 
+            // agregarImagenToolStripMenuItem
+            // 
+            this.agregarImagenToolStripMenuItem.Name = "agregarImagenToolStripMenuItem";
+            this.agregarImagenToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.agregarImagenToolStripMenuItem.Text = "Agregar Imagen";
+            this.agregarImagenToolStripMenuItem.Click += new System.EventHandler(this.agregarImagenToolStripMenuItem_Click);
+            // 
+            // eliminarImagenToolStripMenuItem
+            // 
+            this.eliminarImagenToolStripMenuItem.Name = "eliminarImagenToolStripMenuItem";
+            this.eliminarImagenToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.eliminarImagenToolStripMenuItem.Text = "EliminarImagen";
+            // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Bookman Old Style", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.Location = new System.Drawing.Point(280, 37);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(55, 16);
+            this.lblNombre.Size = new System.Drawing.Size(59, 18);
             this.lblNombre.TabIndex = 2;
             this.lblNombre.Text = "Nombre";
             // 
@@ -235,10 +254,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bookman Old Style", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(280, 79);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 16);
+            this.label1.Size = new System.Drawing.Size(66, 18);
             this.label1.TabIndex = 4;
             this.label1.Text = "Apellidos";
             // 
@@ -254,10 +273,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Bookman Old Style", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(280, 122);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 16);
+            this.label2.Size = new System.Drawing.Size(41, 18);
             this.label2.TabIndex = 6;
             this.label2.Text = "Alias";
             // 
@@ -273,10 +292,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Bookman Old Style", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(280, 163);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 16);
+            this.label3.Size = new System.Drawing.Size(38, 18);
             this.label3.TabIndex = 8;
             this.label3.Text = "Edad";
             // 
@@ -292,10 +311,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Bookman Old Style", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(280, 203);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 16);
+            this.label4.Size = new System.Drawing.Size(64, 18);
             this.label4.TabIndex = 10;
             this.label4.Text = "Estatura";
             // 
@@ -311,10 +330,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Bookman Old Style", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(280, 279);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 16);
+            this.label5.Size = new System.Drawing.Size(93, 18);
             this.label5.TabIndex = 12;
             this.label5.Text = "Nacionalidad";
             // 
@@ -330,30 +349,30 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Bookman Old Style", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(601, 37);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 16);
+            this.label6.Size = new System.Drawing.Size(53, 18);
             this.label6.TabIndex = 14;
             this.label6.Text = "Origen";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Bookman Old Style", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(601, 80);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 16);
+            this.label7.Size = new System.Drawing.Size(51, 18);
             this.label7.TabIndex = 16;
             this.label7.Text = "Carcel";
             // 
             // lblEstatus
             // 
             this.lblEstatus.AutoSize = true;
-            this.lblEstatus.Font = new System.Drawing.Font("Bookman Old Style", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstatus.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstatus.Location = new System.Drawing.Point(601, 122);
             this.lblEstatus.Name = "lblEstatus";
-            this.lblEstatus.Size = new System.Drawing.Size(55, 16);
+            this.lblEstatus.Size = new System.Drawing.Size(57, 18);
             this.lblEstatus.TabIndex = 18;
             this.lblEstatus.Text = "Estatus";
             // 
@@ -369,10 +388,10 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Bookman Old Style", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(601, 159);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(61, 16);
+            this.label9.Size = new System.Drawing.Size(66, 18);
             this.label9.TabIndex = 20;
             this.label9.Text = "Condena";
             // 
@@ -388,10 +407,10 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Bookman Old Style", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(601, 199);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(47, 16);
+            this.label10.Size = new System.Drawing.Size(52, 18);
             this.label10.TabIndex = 22;
             this.label10.Text = "Fianza";
             // 
@@ -407,10 +426,10 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Bookman Old Style", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(601, 247);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(79, 16);
+            this.label11.Size = new System.Drawing.Size(86, 18);
             this.label11.TabIndex = 24;
             this.label11.Text = "Descripción";
             // 
@@ -418,21 +437,10 @@
             // 
             this.pnlFotos.AutoScroll = true;
             this.pnlFotos.BackColor = System.Drawing.Color.Black;
-            this.pnlFotos.Controls.Add(this.pictureBox1);
             this.pnlFotos.Location = new System.Drawing.Point(13, 366);
             this.pnlFotos.Name = "pnlFotos";
             this.pnlFotos.Size = new System.Drawing.Size(856, 195);
             this.pnlFotos.TabIndex = 26;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Location = new System.Drawing.Point(20, 24);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(115, 145);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Visible = false;
             // 
             // cmbCarcel
             // 
@@ -468,34 +476,12 @@
             // lblRelacion
             // 
             this.lblRelacion.AutoSize = true;
-            this.lblRelacion.Font = new System.Drawing.Font("Bookman Old Style", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRelacion.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRelacion.Location = new System.Drawing.Point(280, 243);
             this.lblRelacion.Name = "lblRelacion";
-            this.lblRelacion.Size = new System.Drawing.Size(60, 16);
+            this.lblRelacion.Size = new System.Drawing.Size(65, 18);
             this.lblRelacion.TabIndex = 29;
             this.lblRelacion.Text = "Relación";
-            // 
-            // imagenToolStripMenuItem
-            // 
-            this.imagenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarImagenToolStripMenuItem,
-            this.eliminarImagenToolStripMenuItem});
-            this.imagenToolStripMenuItem.Name = "imagenToolStripMenuItem";
-            this.imagenToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.imagenToolStripMenuItem.Text = "Imagen";
-            // 
-            // agregarImagenToolStripMenuItem
-            // 
-            this.agregarImagenToolStripMenuItem.Name = "agregarImagenToolStripMenuItem";
-            this.agregarImagenToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.agregarImagenToolStripMenuItem.Text = "Agregar Imagen";
-            this.agregarImagenToolStripMenuItem.Click += new System.EventHandler(this.agregarImagenToolStripMenuItem_Click);
-            // 
-            // eliminarImagenToolStripMenuItem
-            // 
-            this.eliminarImagenToolStripMenuItem.Name = "eliminarImagenToolStripMenuItem";
-            this.eliminarImagenToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.eliminarImagenToolStripMenuItem.Text = "EliminarImagen";
             // 
             // NewCriminal
             // 
@@ -538,8 +524,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgCriminal)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.pnlFotos.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -579,7 +563,6 @@
         private System.Windows.Forms.ToolStripMenuItem escalaDeGrisesToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem sephiaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem contornoToolStripMenuItem;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem abrirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem guardarCriminalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem brilloToolStripMenuItem;

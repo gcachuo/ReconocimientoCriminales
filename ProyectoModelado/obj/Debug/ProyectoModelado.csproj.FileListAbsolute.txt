@@ -46,3 +46,4 @@ C:\Users\Memo\Documents\GitHub\ReconocimientoCriminales\ProyectoModelado\bin\Deb
 C:\Users\Memo\Documents\GitHub\ReconocimientoCriminales\ProyectoModelado\bin\Debug\AForge.Imaging.xml
 C:\Users\Memo\Documents\GitHub\ReconocimientoCriminales\ProyectoModelado\bin\Debug\AForge.Math.xml
 C:\Users\Memo\Documents\GitHub\ReconocimientoCriminales\ProyectoModelado\bin\Debug\AForge.Vision.xml
+C:\Users\Javier\Source\Repos\ReconocimientoCriminales\ProyectoModelado\obj\Debug\ProyectoModelado.View.SignIn.resources

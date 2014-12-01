@@ -27,5 +27,12 @@ namespace ProyectoModelado
             menu.Show();
             Hide();
         }
+
+        private void btnSignIn_Click(object sender, EventArgs e)
+        {
+            SignIn sign = new SignIn();
+            sign.Show();
+            this.Hide();
+        }
     }
 }

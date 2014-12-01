@@ -66,6 +66,7 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Windows.Presentation" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
@@ -82,6 +83,11 @@
   <ItemGroup>
     <Compile Include="Canny.cs" />
     <Compile Include="Filtros.cs" />
+    <Compile Include="Modelo\Model.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.dbml</DependentUpon>
+    </Compile>
     <Compile Include="View\AdmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,15 @@
     <Compile Include="View\NewCriminal.Designer.cs">
       <DependentUpon>NewCriminal.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\SignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SignIn.Designer.cs">
+      <DependentUpon>SignIn.cs</DependentUpon>
+    </Compile>
+    <None Include="Modelo\Model.dbml.layout">
+      <DependentUpon>Model.dbml</DependentUpon>
+    </None>
     <EmbeddedResource Include="View\AdmMenu.resx">
       <DependentUpon>AdmMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,6 +139,14 @@
     <EmbeddedResource Include="View\NewCriminal.resx">
       <DependentUpon>NewCriminal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\SignIn.resx">
+      <DependentUpon>SignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Modelo\Model.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Model.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -163,6 +186,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Code\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

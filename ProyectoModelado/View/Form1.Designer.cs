@@ -30,7 +30,7 @@
         {
             this.lblUser = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
-            this.txtUSer = new System.Windows.Forms.TextBox();
+            this.txtUser = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.btnSignIn = new System.Windows.Forms.Button();
             this.btnLogIn = new System.Windows.Forms.Button();
@@ -58,15 +58,15 @@
             this.lblPassword.TabIndex = 1;
             this.lblPassword.Text = "Password";
             // 
-            // txtUSer
+            // txtUser
             // 
-            this.txtUSer.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUSer.Location = new System.Drawing.Point(30, 70);
-            this.txtUSer.Multiline = true;
-            this.txtUSer.Name = "txtUSer";
-            this.txtUSer.Size = new System.Drawing.Size(193, 24);
-            this.txtUSer.TabIndex = 2;
-            this.txtUSer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtUser.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUser.Location = new System.Drawing.Point(30, 70);
+            this.txtUser.Multiline = true;
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(193, 24);
+            this.txtUser.TabIndex = 2;
+            this.txtUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox2
             // 
@@ -90,6 +90,7 @@
             this.btnSignIn.TabIndex = 4;
             this.btnSignIn.Text = "Sign in";
             this.btnSignIn.UseVisualStyleBackColor = false;
+            this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
             // 
             // btnLogIn
             // 
@@ -113,7 +114,7 @@
             this.Controls.Add(this.btnLogIn);
             this.Controls.Add(this.btnSignIn);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.txtUSer);
+            this.Controls.Add(this.txtUser);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUser);
             this.ForeColor = System.Drawing.Color.White;
@@ -131,7 +132,7 @@
 
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.TextBox txtUSer;
+        private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button btnSignIn;
         private System.Windows.Forms.Button btnLogIn;
