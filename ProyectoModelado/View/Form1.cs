@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoModelado.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,11 +22,18 @@ namespace ProyectoModelado
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            Form1 form =new Form1();
-            form.Hide();
-            var wpf = new Main1();
-            ElementHost.EnableModelessKeyboardInterop(wpf);
-            wpf.Show();
+            //Form1 form =new Form1();
+            //form.Hide();
+            //var wpf = new Main1();
+            //ElementHost.EnableModelessKeyboardInterop(wpf);
+            //wpf.Show();
+        }
+
+        private void btnLogIn_Click(object sender, EventArgs e)
+        {
+            AdmMenu menu = new AdmMenu();
+            menu.Show();
+            this.Hide();
         }
     }
 }
