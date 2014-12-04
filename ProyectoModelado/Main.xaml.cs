@@ -8,6 +8,12 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Microsoft.Kinect;
 using System.Drawing.Imaging;
+using ProyectoModelado.Modelo;
+using System.Data.Linq;
+using System.Collections;
+using System.Speech.Synthesis;
+using System.Speech.Recognition;
+using System.Threading;
 
 
 namespace ProyectoModelado
@@ -30,7 +36,12 @@ namespace ProyectoModelado
         private bool MovAtras = false;
         private SolidColorBrush brushActivo = new SolidColorBrush(Colors.Green);
         private SolidColorBrush brushInactivo = new SolidColorBrush(Colors.Red);
+        SpeechSynthesizer sSynth = new SpeechSynthesizer();
+        PromptBuilder pBuilder = new PromptBuilder();
+        SpeechRecognitionEngine sRecognize = new SpeechRecognitionEngine();
+        IQueryable lstCriminals;
         //Image[] fotos=new Image[5]{"",};
+
 
 
         //Metodo para convertir un arreglo de bytes a imagen
@@ -46,6 +57,13 @@ namespace ProyectoModelado
         }
 
 
+        public void HablarTexto(string text)
+        {
+            pBuilder.ClearContent();
+            pBuilder.AppendText(text);
+            sSynth.Speak(pBuilder);
+        }
+
 
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -54,12 +72,11 @@ namespace ProyectoModelado
             form.Hide();
             try
             {
-                //Cargar lista de criminales
-                /////
-                ////
-                ///
 
-                //Por cada campo de imagen llamar el metodo GetImage
+                //Cargar lista de criminales
+                ProyectoModelado.Modelo.DBDataContext db = new Modelo.DBDataContext();
+                lstCriminals = db.criminals.Where(x => x.Id > 0);
+
 
 
 

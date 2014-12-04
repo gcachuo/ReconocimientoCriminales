@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Media.Imaging;
+using ProyectoModelado.Modelo;
 
 namespace ProyectoModelado.View
 {
@@ -238,22 +239,52 @@ namespace ProyectoModelado.View
             return bytes;
         }
 
+        int VerificarNivel(string nivel)
+        {
+            var numero = 0;
+            switch (nivel)
+            {
+                case "Normal": numero = 1; break;
+                case "Peligroso": numero = 2; break;
+                case "Extre-Peligroso": numero = 3; break;
+            }
+
+            return numero;
+        }
+
         private void guardarCriminalToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var imageInBytes = ImageToByte(actualPath);
-            var nombre = txtNombre.Text;
-            var apellidos = txtApellidos.Text;
-            var alias = txtAlias.Text;
-            var edad = int.Parse(txtEdad.Text);
-            var estatura = txtEstatura.Text;
-            var relacion = txtRelacion.Text;
-            var nacionalidad = txtNacionalidad.Text;
-            var origen = txtOrigen.Text;
-            var carcel = cmbCarcel.SelectedItem.ToString();
-            var estatus = cmbEstatus.SelectedItem.ToString();
-            var condena = txtCondena.Text;
-            var fianza = txtFianza.Text;
-            var descripcion = txtDescripcion.Text;
+            criminal newCriminal = new criminal();
+            effect efecto = new effect();
+
+
+            newCriminal.Imagen = ImageToByte(actualPath);
+            newCriminal.Nombre = txtNombre.Text;
+            newCriminal.Apellido = txtApellidos.Text;
+            newCriminal.Alias = txtAlias.Text;
+            newCriminal.Edad = int.Parse(txtEdad.Text);
+            newCriminal.Estatura = int.Parse(txtEstatura.Text);
+            newCriminal.Relacion = txtRelacion.Text;
+            newCriminal.Nacionalidad = txtNacionalidad.Text;
+            newCriminal.Origen = txtOrigen.Text;
+            newCriminal.Carcel = cmbCarcel.SelectedItem.ToString();
+
+            //En la base de datos el campo estatusponlo comoo intp porfavor
+            newCriminal.Estatus = VerificarNivel(cmbEstatus.SelectedItem.ToString());
+
+
+
+            newCriminal.Condena = txtCondena.Text;
+            newCriminal.Fianza = decimal.Parse(txtFianza.Text);
+            newCriminal.Descripcion = txtDescripcion.Text;
+
+            DBDataContext db = new DBDataContext();
+            
+
+            db.criminals.InsertOnSubmit(newCriminal);
+            db.SubmitChanges();
+
+            var idCriminal = db.criminals.FirstOrDefault(x => x.Nombre == txtNombre.Text);
 
 
             //Obtener imagenes del Panel
@@ -261,9 +292,15 @@ namespace ProyectoModelado.View
             foreach(var item in pnlFotos.Controls)
             {
                 var image = ImageToBytes( (Bitmap) ((PictureBox)item).Image);
-                images.Add(image);
+                efecto.Id_Criminal = idCriminal.Id.ToString();
+                efecto.imagenModificada = image;
+                db.effects.InsertOnSubmit(efecto);
+                db.SubmitChanges();
+
             }
 
+            
+            
             //Luego Imprimir en la base de datos
 
         }

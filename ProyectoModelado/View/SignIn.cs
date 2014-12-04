@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProyectoModelado.Modelo;
 
 namespace ProyectoModelado.View
 {
@@ -26,6 +27,22 @@ namespace ProyectoModelado.View
 
         private void btnCreateUser_Click(object sender, EventArgs e)
         {
+            try
+            {
+                DBDataContext db = new DBDataContext();
+                user usuario = new user();
+                usuario.Nombre = txtUser.Text;
+                usuario.Contrasena = txtContrasena.Text;
+                db.users.InsertOnSubmit(usuario);
+                db.SubmitChanges();
+                Form1 frm = new Form1();
+                frm.Show();
+                this.Hide();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

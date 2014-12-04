@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignIn));
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtContrasena = new System.Windows.Forms.TextBox();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblUser = new System.Windows.Forms.Label();
@@ -37,16 +37,16 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox2
+            // txtContrasena
             // 
-            this.textBox2.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(112, 180);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(193, 24);
-            this.textBox2.TabIndex = 7;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtContrasena.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContrasena.Location = new System.Drawing.Point(112, 180);
+            this.txtContrasena.Multiline = true;
+            this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.PasswordChar = '*';
+            this.txtContrasena.Size = new System.Drawing.Size(193, 24);
+            this.txtContrasena.TabIndex = 7;
+            this.txtContrasena.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtUser
             // 
@@ -85,7 +85,7 @@
             this.btnCreateUser.BackColor = System.Drawing.Color.DarkRed;
             this.btnCreateUser.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreateUser.ForeColor = System.Drawing.Color.White;
-            this.btnCreateUser.Location = new System.Drawing.Point(100, 271);
+            this.btnCreateUser.Location = new System.Drawing.Point(112, 284);
             this.btnCreateUser.Name = "btnCreateUser";
             this.btnCreateUser.Size = new System.Drawing.Size(141, 35);
             this.btnCreateUser.TabIndex = 8;
@@ -113,7 +113,7 @@
             this.ClientSize = new System.Drawing.Size(340, 385);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnCreateUser);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtContrasena);
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUser);
@@ -128,7 +128,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtContrasena;
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblUser;
