@@ -23,5 +23,10 @@ namespace ProyectoModelado.View
             main.Show();
             this.Hide();
         }
+
+        private void btnCreateUser_Click(object sender, EventArgs e)
+        {
+            //Crear Usuario en la base de datos para administrar aplicacion
+        }
     }
 }

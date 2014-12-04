@@ -7,6 +7,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Microsoft.Kinect;
+using System.Drawing.Imaging;
+
 
 namespace ProyectoModelado
 {
@@ -29,12 +31,38 @@ namespace ProyectoModelado
         private SolidColorBrush brushActivo = new SolidColorBrush(Colors.Green);
         private SolidColorBrush brushInactivo = new SolidColorBrush(Colors.Red);
         //Image[] fotos=new Image[5]{"",};
+
+
+        //Metodo para convertir un arreglo de bytes a imagen
+        public static BitmapImage GetImage(Byte[] bytes)
+        {
+            MemoryStream stream = new MemoryStream(bytes);
+            stream.Seek(0, SeekOrigin.Begin);
+            BitmapImage image = new BitmapImage();
+            image.BeginInit();
+            image.StreamSource = stream;
+            image.EndInit();
+            return image;
+        }
+
+
+
+
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             var form = new Form1();
             form.Hide();
             try
             {
+                //Cargar lista de criminales
+                /////
+                ////
+                ///
+
+                //Por cada campo de imagen llamar el metodo GetImage
+
+
+
                 sensor = KinectSensor.KinectSensors[0];
                 sensor.SkeletonStream.Enable();
                 sensor.Start();
@@ -105,7 +133,7 @@ namespace ProyectoModelado
                 }
 
             }
-           
+
             else if (manoDer.Position.X < hombroDer.Position.X)
             {
                 if (!MovAdelante)
@@ -114,7 +142,7 @@ namespace ProyectoModelado
                     MessageBox.Show("Vuelta");
                 }
             }
-            
+
             else
             {
                 MovAdelante = false;

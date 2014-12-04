@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Media.Imaging;
 
 namespace ProyectoModelado.View
 {
@@ -228,10 +229,42 @@ namespace ProyectoModelado.View
             width += 135;
         }
 
+        public byte[] ImageToBytes(Bitmap imageSource)
+        {
+            MemoryStream stream = new MemoryStream();
+            imageSource.Save(stream, System.Drawing.Imaging.ImageFormat.Bmp);
+            byte[] bytes = stream.ToArray();
+
+            return bytes;
+        }
+
         private void guardarCriminalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var imageInBytes = ImageToByte(actualPath);
             var nombre = txtNombre.Text;
+            var apellidos = txtApellidos.Text;
+            var alias = txtAlias.Text;
+            var edad = int.Parse(txtEdad.Text);
+            var estatura = txtEstatura.Text;
+            var relacion = txtRelacion.Text;
+            var nacionalidad = txtNacionalidad.Text;
+            var origen = txtOrigen.Text;
+            var carcel = cmbCarcel.SelectedItem.ToString();
+            var estatus = cmbEstatus.SelectedItem.ToString();
+            var condena = txtCondena.Text;
+            var fianza = txtFianza.Text;
+            var descripcion = txtDescripcion.Text;
+
+
+            //Obtener imagenes del Panel
+            List<byte[]> images = new List<byte[]>();
+            foreach(var item in pnlFotos.Controls)
+            {
+                var image = ImageToBytes( (Bitmap) ((PictureBox)item).Image);
+                images.Add(image);
+            }
+
+            //Luego Imprimir en la base de datos
 
         }
 
