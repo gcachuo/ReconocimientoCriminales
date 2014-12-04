@@ -82,6 +82,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Canny.cs" />
+    <Compile Include="DB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB.dbml</DependentUpon>
+    </Compile>
     <Compile Include="Filtros.cs" />
     <Compile Include="Modelo\Model.designer.cs">
       <AutoGen>True</AutoGen>
@@ -118,8 +123,16 @@
     <Compile Include="View\SignIn.Designer.cs">
       <DependentUpon>SignIn.cs</DependentUpon>
     </Compile>
+    <None Include="DB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Modelo\Model.dbml.layout">
       <DependentUpon>Model.dbml</DependentUpon>
+    </None>
+    <None Include="DB.dbml.layout">
+      <DependentUpon>DB.dbml</DependentUpon>
     </None>
     <EmbeddedResource Include="View\AdmMenu.resx">
       <DependentUpon>AdmMenu.cs</DependentUpon>
