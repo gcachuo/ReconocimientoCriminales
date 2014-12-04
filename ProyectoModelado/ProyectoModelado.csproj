@@ -82,17 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Canny.cs" />
-    <Compile Include="DB.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DB.dbml</DependentUpon>
-    </Compile>
     <Compile Include="Filtros.cs" />
-    <Compile Include="Modelo\Model.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model.dbml</DependentUpon>
-    </Compile>
     <Compile Include="View\AdmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,17 +113,6 @@
     <Compile Include="View\SignIn.Designer.cs">
       <DependentUpon>SignIn.cs</DependentUpon>
     </Compile>
-    <None Include="DB.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>DB.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Modelo\Model.dbml.layout">
-      <DependentUpon>Model.dbml</DependentUpon>
-    </None>
-    <None Include="DB.dbml.layout">
-      <DependentUpon>DB.dbml</DependentUpon>
-    </None>
     <EmbeddedResource Include="View\AdmMenu.resx">
       <DependentUpon>AdmMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,11 +134,6 @@
     <EmbeddedResource Include="View\SignIn.resx">
       <DependentUpon>SignIn.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Modelo\Model.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>Model.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -199,6 +173,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Code\" />
+    <Folder Include="Modelo\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
