@@ -1,24 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Criminales" Class="DBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=MEMO-HP;Initial Catalog=Criminales;Integrated Security=True" SettingsObjectName="ProyectoModelado.Properties.Settings" SettingsPropertyName="CriminalesConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.criminals" Member="criminals">
-    <Type Name="criminal">
-      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="Nombre" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
-      <Column Name="Apellido" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
-      <Column Name="Alias" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
-      <Column Name="Edad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Estatura" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Relacion" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
-      <Column Name="Nacionalidad" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
-      <Column Name="Origen" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
-      <Column Name="Carcel" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
-      <Column Name="Estatus" Type="System.Data.Linq.Binary" DbType="Binary(1) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="Condena" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
-      <Column Name="Fianza" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
-      <Column Name="Descripcion" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
-      <Column Name="Imagen" Type="System.Data.Linq.Binary" DbType="Image NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-    </Type>
-  </Table>
   <Table Name="dbo.effects" Member="effects">
     <Type Name="effect">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -37,18 +18,30 @@
       <Column Name="Division" Type="System.Data.Linq.Binary" DbType="Binary(2) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
     </Type>
   </Table>
-  <Table Name="dbo.users" Member="users">
-    <Type Name="user">
+  <Table Name="dbo.criminals" Member="criminals">
+    <Type Name="criminal">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Nombre" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
       <Column Name="Apellido" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
-      <Column Name="Usuario" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Alias" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
       <Column Name="Edad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Puesto" Type="System.String" DbType="NVarChar(35) NOT NULL" CanBeNull="false" />
-      <Column Name="Correo" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="Telefono" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Estatus" Type="System.Data.Linq.Binary" DbType="Binary(1) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
-      <Column Name="idPrision" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Estatura" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Relacion" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Nacionalidad" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Origen" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Carcel" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Estatus" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Condena" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Fianza" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Imagen" Type="System.Data.Linq.Binary" DbType="Image NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.users" Member="users">
+    <Type Name="user">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Usuario" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
 </Database>

@@ -30,15 +30,15 @@ namespace ProyectoModelado.Modelo
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void Insertcriminal(criminal instance);
-    partial void Updatecriminal(criminal instance);
-    partial void Deletecriminal(criminal instance);
     partial void Inserteffect(effect instance);
     partial void Updateeffect(effect instance);
     partial void Deleteeffect(effect instance);
     partial void Insertprision(prision instance);
     partial void Updateprision(prision instance);
     partial void Deleteprision(prision instance);
+    partial void Insertcriminal(criminal instance);
+    partial void Updatecriminal(criminal instance);
+    partial void Deletecriminal(criminal instance);
     partial void Insertuser(user instance);
     partial void Updateuser(user instance);
     partial void Deleteuser(user instance);
@@ -74,14 +74,6 @@ namespace ProyectoModelado.Modelo
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<criminal> criminals
-		{
-			get
-			{
-				return this.GetTable<criminal>();
-			}
-		}
-		
 		public System.Data.Linq.Table<effect> effects
 		{
 			get
@@ -98,409 +90,19 @@ namespace ProyectoModelado.Modelo
 			}
 		}
 		
+		public System.Data.Linq.Table<criminal> criminals
+		{
+			get
+			{
+				return this.GetTable<criminal>();
+			}
+		}
+		
 		public System.Data.Linq.Table<user> users
 		{
 			get
 			{
 				return this.GetTable<user>();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.criminals")]
-	public partial class criminal : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _Id;
-		
-		private string _Nombre;
-		
-		private string _Apellido;
-		
-		private string _Alias;
-		
-		private int _Edad;
-		
-		private int _Estatura;
-		
-		private string _Relacion;
-		
-		private string _Nacionalidad;
-		
-		private string _Origen;
-		
-		private string _Carcel;
-		
-		private System.Data.Linq.Binary _Estatus;
-		
-		private string _Condena;
-		
-		private decimal _Fianza;
-		
-		private string _Descripcion;
-		
-		private System.Data.Linq.Binary _Imagen;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIdChanging(int value);
-    partial void OnIdChanged();
-    partial void OnNombreChanging(string value);
-    partial void OnNombreChanged();
-    partial void OnApellidoChanging(string value);
-    partial void OnApellidoChanged();
-    partial void OnAliasChanging(string value);
-    partial void OnAliasChanged();
-    partial void OnEdadChanging(int value);
-    partial void OnEdadChanged();
-    partial void OnEstaturaChanging(int value);
-    partial void OnEstaturaChanged();
-    partial void OnRelacionChanging(string value);
-    partial void OnRelacionChanged();
-    partial void OnNacionalidadChanging(string value);
-    partial void OnNacionalidadChanged();
-    partial void OnOrigenChanging(string value);
-    partial void OnOrigenChanged();
-    partial void OnCarcelChanging(string value);
-    partial void OnCarcelChanged();
-    partial void OnEstatusChanging(System.Data.Linq.Binary value);
-    partial void OnEstatusChanged();
-    partial void OnCondenaChanging(string value);
-    partial void OnCondenaChanged();
-    partial void OnFianzaChanging(decimal value);
-    partial void OnFianzaChanged();
-    partial void OnDescripcionChanging(string value);
-    partial void OnDescripcionChanged();
-    partial void OnImagenChanging(System.Data.Linq.Binary value);
-    partial void OnImagenChanged();
-    #endregion
-		
-		public criminal()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int Id
-		{
-			get
-			{
-				return this._Id;
-			}
-			set
-			{
-				if ((this._Id != value))
-				{
-					this.OnIdChanging(value);
-					this.SendPropertyChanging();
-					this._Id = value;
-					this.SendPropertyChanged("Id");
-					this.OnIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombre", DbType="NVarChar(45) NOT NULL", CanBeNull=false)]
-		public string Nombre
-		{
-			get
-			{
-				return this._Nombre;
-			}
-			set
-			{
-				if ((this._Nombre != value))
-				{
-					this.OnNombreChanging(value);
-					this.SendPropertyChanging();
-					this._Nombre = value;
-					this.SendPropertyChanged("Nombre");
-					this.OnNombreChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Apellido", DbType="NVarChar(45) NOT NULL", CanBeNull=false)]
-		public string Apellido
-		{
-			get
-			{
-				return this._Apellido;
-			}
-			set
-			{
-				if ((this._Apellido != value))
-				{
-					this.OnApellidoChanging(value);
-					this.SendPropertyChanging();
-					this._Apellido = value;
-					this.SendPropertyChanged("Apellido");
-					this.OnApellidoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Alias", DbType="NVarChar(45) NOT NULL", CanBeNull=false)]
-		public string Alias
-		{
-			get
-			{
-				return this._Alias;
-			}
-			set
-			{
-				if ((this._Alias != value))
-				{
-					this.OnAliasChanging(value);
-					this.SendPropertyChanging();
-					this._Alias = value;
-					this.SendPropertyChanged("Alias");
-					this.OnAliasChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Edad", DbType="Int NOT NULL")]
-		public int Edad
-		{
-			get
-			{
-				return this._Edad;
-			}
-			set
-			{
-				if ((this._Edad != value))
-				{
-					this.OnEdadChanging(value);
-					this.SendPropertyChanging();
-					this._Edad = value;
-					this.SendPropertyChanged("Edad");
-					this.OnEdadChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Estatura", DbType="Int NOT NULL")]
-		public int Estatura
-		{
-			get
-			{
-				return this._Estatura;
-			}
-			set
-			{
-				if ((this._Estatura != value))
-				{
-					this.OnEstaturaChanging(value);
-					this.SendPropertyChanging();
-					this._Estatura = value;
-					this.SendPropertyChanged("Estatura");
-					this.OnEstaturaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Relacion", DbType="NVarChar(45) NOT NULL", CanBeNull=false)]
-		public string Relacion
-		{
-			get
-			{
-				return this._Relacion;
-			}
-			set
-			{
-				if ((this._Relacion != value))
-				{
-					this.OnRelacionChanging(value);
-					this.SendPropertyChanging();
-					this._Relacion = value;
-					this.SendPropertyChanged("Relacion");
-					this.OnRelacionChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nacionalidad", DbType="NVarChar(45) NOT NULL", CanBeNull=false)]
-		public string Nacionalidad
-		{
-			get
-			{
-				return this._Nacionalidad;
-			}
-			set
-			{
-				if ((this._Nacionalidad != value))
-				{
-					this.OnNacionalidadChanging(value);
-					this.SendPropertyChanging();
-					this._Nacionalidad = value;
-					this.SendPropertyChanged("Nacionalidad");
-					this.OnNacionalidadChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Origen", DbType="NVarChar(45) NOT NULL", CanBeNull=false)]
-		public string Origen
-		{
-			get
-			{
-				return this._Origen;
-			}
-			set
-			{
-				if ((this._Origen != value))
-				{
-					this.OnOrigenChanging(value);
-					this.SendPropertyChanging();
-					this._Origen = value;
-					this.SendPropertyChanged("Origen");
-					this.OnOrigenChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Carcel", DbType="NVarChar(45) NOT NULL", CanBeNull=false)]
-		public string Carcel
-		{
-			get
-			{
-				return this._Carcel;
-			}
-			set
-			{
-				if ((this._Carcel != value))
-				{
-					this.OnCarcelChanging(value);
-					this.SendPropertyChanging();
-					this._Carcel = value;
-					this.SendPropertyChanged("Carcel");
-					this.OnCarcelChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Estatus", DbType="Binary(1) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public System.Data.Linq.Binary Estatus
-		{
-			get
-			{
-				return this._Estatus;
-			}
-			set
-			{
-				if ((this._Estatus != value))
-				{
-					this.OnEstatusChanging(value);
-					this.SendPropertyChanging();
-					this._Estatus = value;
-					this.SendPropertyChanged("Estatus");
-					this.OnEstatusChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Condena", DbType="NVarChar(45) NOT NULL", CanBeNull=false)]
-		public string Condena
-		{
-			get
-			{
-				return this._Condena;
-			}
-			set
-			{
-				if ((this._Condena != value))
-				{
-					this.OnCondenaChanging(value);
-					this.SendPropertyChanging();
-					this._Condena = value;
-					this.SendPropertyChanged("Condena");
-					this.OnCondenaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fianza", DbType="Money NOT NULL")]
-		public decimal Fianza
-		{
-			get
-			{
-				return this._Fianza;
-			}
-			set
-			{
-				if ((this._Fianza != value))
-				{
-					this.OnFianzaChanging(value);
-					this.SendPropertyChanging();
-					this._Fianza = value;
-					this.SendPropertyChanged("Fianza");
-					this.OnFianzaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Descripcion", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
-		public string Descripcion
-		{
-			get
-			{
-				return this._Descripcion;
-			}
-			set
-			{
-				if ((this._Descripcion != value))
-				{
-					this.OnDescripcionChanging(value);
-					this.SendPropertyChanging();
-					this._Descripcion = value;
-					this.SendPropertyChanged("Descripcion");
-					this.OnDescripcionChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Imagen", DbType="Image NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public System.Data.Linq.Binary Imagen
-		{
-			get
-			{
-				return this._Imagen;
-			}
-			set
-			{
-				if ((this._Imagen != value))
-				{
-					this.OnImagenChanging(value);
-					this.SendPropertyChanging();
-					this._Imagen = value;
-					this.SendPropertyChanged("Imagen");
-					this.OnImagenChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}
@@ -821,8 +423,8 @@ namespace ProyectoModelado.Modelo
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.users")]
-	public partial class user : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.criminals")]
+	public partial class criminal : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -833,19 +435,29 @@ namespace ProyectoModelado.Modelo
 		
 		private string _Apellido;
 		
-		private string _Usuario;
+		private string _Alias;
 		
 		private int _Edad;
 		
-		private string _Puesto;
+		private int _Estatura;
 		
-		private string _Correo;
+		private string _Relacion;
 		
-		private int _Telefono;
+		private string _Nacionalidad;
 		
-		private System.Data.Linq.Binary _Estatus;
+		private string _Origen;
 		
-		private int _idPrision;
+		private string _Carcel;
+		
+		private int _Estatus;
+		
+		private string _Condena;
+		
+		private decimal _Fianza;
+		
+		private string _Descripcion;
+		
+		private System.Data.Linq.Binary _Imagen;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -857,23 +469,33 @@ namespace ProyectoModelado.Modelo
     partial void OnNombreChanged();
     partial void OnApellidoChanging(string value);
     partial void OnApellidoChanged();
-    partial void OnUsuarioChanging(string value);
-    partial void OnUsuarioChanged();
+    partial void OnAliasChanging(string value);
+    partial void OnAliasChanged();
     partial void OnEdadChanging(int value);
     partial void OnEdadChanged();
-    partial void OnPuestoChanging(string value);
-    partial void OnPuestoChanged();
-    partial void OnCorreoChanging(string value);
-    partial void OnCorreoChanged();
-    partial void OnTelefonoChanging(int value);
-    partial void OnTelefonoChanged();
-    partial void OnEstatusChanging(System.Data.Linq.Binary value);
+    partial void OnEstaturaChanging(int value);
+    partial void OnEstaturaChanged();
+    partial void OnRelacionChanging(string value);
+    partial void OnRelacionChanged();
+    partial void OnNacionalidadChanging(string value);
+    partial void OnNacionalidadChanged();
+    partial void OnOrigenChanging(string value);
+    partial void OnOrigenChanged();
+    partial void OnCarcelChanging(string value);
+    partial void OnCarcelChanged();
+    partial void OnEstatusChanging(int value);
     partial void OnEstatusChanged();
-    partial void OnidPrisionChanging(int value);
-    partial void OnidPrisionChanged();
+    partial void OnCondenaChanging(string value);
+    partial void OnCondenaChanged();
+    partial void OnFianzaChanging(decimal value);
+    partial void OnFianzaChanged();
+    partial void OnDescripcionChanging(string value);
+    partial void OnDescripcionChanged();
+    partial void OnImagenChanging(System.Data.Linq.Binary value);
+    partial void OnImagenChanged();
     #endregion
 		
-		public user()
+		public criminal()
 		{
 			OnCreated();
 		}
@@ -938,22 +560,22 @@ namespace ProyectoModelado.Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Usuario", DbType="NVarChar(45) NOT NULL", CanBeNull=false)]
-		public string Usuario
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Alias", DbType="NVarChar(45) NOT NULL", CanBeNull=false)]
+		public string Alias
 		{
 			get
 			{
-				return this._Usuario;
+				return this._Alias;
 			}
 			set
 			{
-				if ((this._Usuario != value))
+				if ((this._Alias != value))
 				{
-					this.OnUsuarioChanging(value);
+					this.OnAliasChanging(value);
 					this.SendPropertyChanging();
-					this._Usuario = value;
-					this.SendPropertyChanged("Usuario");
-					this.OnUsuarioChanged();
+					this._Alias = value;
+					this.SendPropertyChanged("Alias");
+					this.OnAliasChanged();
 				}
 			}
 		}
@@ -978,68 +600,108 @@ namespace ProyectoModelado.Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Puesto", DbType="NVarChar(35) NOT NULL", CanBeNull=false)]
-		public string Puesto
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Estatura", DbType="Int NOT NULL")]
+		public int Estatura
 		{
 			get
 			{
-				return this._Puesto;
+				return this._Estatura;
 			}
 			set
 			{
-				if ((this._Puesto != value))
+				if ((this._Estatura != value))
 				{
-					this.OnPuestoChanging(value);
+					this.OnEstaturaChanging(value);
 					this.SendPropertyChanging();
-					this._Puesto = value;
-					this.SendPropertyChanged("Puesto");
-					this.OnPuestoChanged();
+					this._Estatura = value;
+					this.SendPropertyChanged("Estatura");
+					this.OnEstaturaChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Correo", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string Correo
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Relacion", DbType="NVarChar(45) NOT NULL", CanBeNull=false)]
+		public string Relacion
 		{
 			get
 			{
-				return this._Correo;
+				return this._Relacion;
 			}
 			set
 			{
-				if ((this._Correo != value))
+				if ((this._Relacion != value))
 				{
-					this.OnCorreoChanging(value);
+					this.OnRelacionChanging(value);
 					this.SendPropertyChanging();
-					this._Correo = value;
-					this.SendPropertyChanged("Correo");
-					this.OnCorreoChanged();
+					this._Relacion = value;
+					this.SendPropertyChanged("Relacion");
+					this.OnRelacionChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Telefono", DbType="Int NOT NULL")]
-		public int Telefono
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nacionalidad", DbType="NVarChar(45) NOT NULL", CanBeNull=false)]
+		public string Nacionalidad
 		{
 			get
 			{
-				return this._Telefono;
+				return this._Nacionalidad;
 			}
 			set
 			{
-				if ((this._Telefono != value))
+				if ((this._Nacionalidad != value))
 				{
-					this.OnTelefonoChanging(value);
+					this.OnNacionalidadChanging(value);
 					this.SendPropertyChanging();
-					this._Telefono = value;
-					this.SendPropertyChanged("Telefono");
-					this.OnTelefonoChanged();
+					this._Nacionalidad = value;
+					this.SendPropertyChanged("Nacionalidad");
+					this.OnNacionalidadChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Estatus", DbType="Binary(1) NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
-		public System.Data.Linq.Binary Estatus
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Origen", DbType="NVarChar(45) NOT NULL", CanBeNull=false)]
+		public string Origen
+		{
+			get
+			{
+				return this._Origen;
+			}
+			set
+			{
+				if ((this._Origen != value))
+				{
+					this.OnOrigenChanging(value);
+					this.SendPropertyChanging();
+					this._Origen = value;
+					this.SendPropertyChanged("Origen");
+					this.OnOrigenChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Carcel", DbType="NVarChar(45) NOT NULL", CanBeNull=false)]
+		public string Carcel
+		{
+			get
+			{
+				return this._Carcel;
+			}
+			set
+			{
+				if ((this._Carcel != value))
+				{
+					this.OnCarcelChanging(value);
+					this.SendPropertyChanging();
+					this._Carcel = value;
+					this.SendPropertyChanged("Carcel");
+					this.OnCarcelChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Estatus", DbType="Int NOT NULL")]
+		public int Estatus
 		{
 			get
 			{
@@ -1058,22 +720,192 @@ namespace ProyectoModelado.Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idPrision", DbType="Int NOT NULL")]
-		public int idPrision
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Condena", DbType="NVarChar(45) NOT NULL", CanBeNull=false)]
+		public string Condena
 		{
 			get
 			{
-				return this._idPrision;
+				return this._Condena;
 			}
 			set
 			{
-				if ((this._idPrision != value))
+				if ((this._Condena != value))
 				{
-					this.OnidPrisionChanging(value);
+					this.OnCondenaChanging(value);
 					this.SendPropertyChanging();
-					this._idPrision = value;
-					this.SendPropertyChanged("idPrision");
-					this.OnidPrisionChanged();
+					this._Condena = value;
+					this.SendPropertyChanged("Condena");
+					this.OnCondenaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fianza", DbType="Money NOT NULL")]
+		public decimal Fianza
+		{
+			get
+			{
+				return this._Fianza;
+			}
+			set
+			{
+				if ((this._Fianza != value))
+				{
+					this.OnFianzaChanging(value);
+					this.SendPropertyChanging();
+					this._Fianza = value;
+					this.SendPropertyChanged("Fianza");
+					this.OnFianzaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Descripcion", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
+		public string Descripcion
+		{
+			get
+			{
+				return this._Descripcion;
+			}
+			set
+			{
+				if ((this._Descripcion != value))
+				{
+					this.OnDescripcionChanging(value);
+					this.SendPropertyChanging();
+					this._Descripcion = value;
+					this.SendPropertyChanged("Descripcion");
+					this.OnDescripcionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Imagen", DbType="Image NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public System.Data.Linq.Binary Imagen
+		{
+			get
+			{
+				return this._Imagen;
+			}
+			set
+			{
+				if ((this._Imagen != value))
+				{
+					this.OnImagenChanging(value);
+					this.SendPropertyChanging();
+					this._Imagen = value;
+					this.SendPropertyChanged("Imagen");
+					this.OnImagenChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.users")]
+	public partial class user : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private string _Usuario;
+		
+		private string _Password;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnUsuarioChanging(string value);
+    partial void OnUsuarioChanged();
+    partial void OnPasswordChanging(string value);
+    partial void OnPasswordChanged();
+    #endregion
+		
+		public user()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Usuario", DbType="NVarChar(45) NOT NULL", CanBeNull=false)]
+		public string Usuario
+		{
+			get
+			{
+				return this._Usuario;
+			}
+			set
+			{
+				if ((this._Usuario != value))
+				{
+					this.OnUsuarioChanging(value);
+					this.SendPropertyChanging();
+					this._Usuario = value;
+					this.SendPropertyChanged("Usuario");
+					this.OnUsuarioChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(45) NOT NULL", CanBeNull=false)]
+		public string Password
+		{
+			get
+			{
+				return this._Password;
+			}
+			set
+			{
+				if ((this._Password != value))
+				{
+					this.OnPasswordChanging(value);
+					this.SendPropertyChanging();
+					this._Password = value;
+					this.SendPropertyChanged("Password");
+					this.OnPasswordChanged();
 				}
 			}
 		}
