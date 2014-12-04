@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.btnAgregarCriminal = new System.Windows.Forms.Button();
+            this.btnVerCriminales = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAgregarCriminal
@@ -43,11 +44,24 @@
             this.btnAgregarCriminal.UseVisualStyleBackColor = false;
             this.btnAgregarCriminal.Click += new System.EventHandler(this.btnAgregarCriminal_Click);
             // 
+            // btnVerCriminales
+            // 
+            this.btnVerCriminales.BackColor = System.Drawing.Color.White;
+            this.btnVerCriminales.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerCriminales.Location = new System.Drawing.Point(32, 123);
+            this.btnVerCriminales.Name = "btnVerCriminales";
+            this.btnVerCriminales.Size = new System.Drawing.Size(213, 47);
+            this.btnVerCriminales.TabIndex = 1;
+            this.btnVerCriminales.Text = "Ver Criminales";
+            this.btnVerCriminales.UseVisualStyleBackColor = false;
+            this.btnVerCriminales.Click += new System.EventHandler(this.btnVerCriminales_Click);
+            // 
             // AdmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(274, 474);
+            this.Controls.Add(this.btnVerCriminales);
             this.Controls.Add(this.btnAgregarCriminal);
             this.Name = "AdmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -59,5 +73,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnAgregarCriminal;
+        private System.Windows.Forms.Button btnVerCriminales;
     }
 }

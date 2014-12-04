@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -117,6 +118,49 @@ namespace ProyectoModelado.View
             AplicaFiltro(new Sharpen(), ref bmpCambio, bmpCambio);
         }
 
+
+
+
+        byte[] ImageToByte(string path)
+        {
+            byte[] data = null;
+            try
+            {
+                FileInfo info = new FileInfo(path);
+                long numBytes = info.Length;
+
+                FileStream fStream = new FileStream(path, FileMode.Open, FileAccess.Read);
+                BinaryReader bReader = new BinaryReader(fStream);
+
+                data = bReader.ReadBytes((int)numBytes);
+                return data;
+            }
+            catch (Exception)
+            {
+                return data;
+            }
+
+        }
+
+        Image GetImage(byte[] imageData)
+        {
+            Image img = null;
+            try
+            {
+                using (MemoryStream ms = new MemoryStream(imageData, 0, imageData.Length))
+                {
+                    ms.Write(imageData, 0, imageData.Length);
+                    img = Image.FromStream(ms, true);
+                }
+
+                return img;
+            }
+            catch (Exception)
+            {
+                return img;
+            }
+        }
+
         #endregion
 
 
@@ -182,6 +226,13 @@ namespace ProyectoModelado.View
             pnlFotos.Controls.Add(pic);
 
             width += 135;
+        }
+
+        private void guardarCriminalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var imageInBytes = ImageToByte(actualPath);
+            var nombre = txtNombre.Text;
+
         }
 
 

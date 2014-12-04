@@ -41,7 +41,7 @@ namespace ProyectoModelado {
     public partial class Main1 : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
         
-        #line 10 "..\..\Main.xaml"
+        #line 13 "..\..\Main.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Image mostrarVideo;
         
@@ -49,7 +49,7 @@ namespace ProyectoModelado {
         #line hidden
         
         
-        #line 12 "..\..\Main.xaml"
+        #line 15 "..\..\Main.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Shapes.Ellipse EllipseCabeza;
         
@@ -57,7 +57,7 @@ namespace ProyectoModelado {
         #line hidden
         
         
-        #line 13 "..\..\Main.xaml"
+        #line 16 "..\..\Main.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Shapes.Ellipse EllipseManoIzq;
         
@@ -65,7 +65,7 @@ namespace ProyectoModelado {
         #line hidden
         
         
-        #line 14 "..\..\Main.xaml"
+        #line 17 "..\..\Main.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Shapes.Ellipse EllipseManoDer;
         

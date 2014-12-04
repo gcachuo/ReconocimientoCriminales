@@ -129,6 +129,7 @@
             this.guardarCriminalToolStripMenuItem.Name = "guardarCriminalToolStripMenuItem";
             this.guardarCriminalToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.guardarCriminalToolStripMenuItem.Text = "Guardar Criminal";
+            this.guardarCriminalToolStripMenuItem.Click += new System.EventHandler(this.guardarCriminalToolStripMenuItem_Click);
             // 
             // efectosToolStripMenuItem
             // 
